@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Book with us</h1>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="date" id="date">
+        <button onclick="addBooking()">Book Now</button>
+        
+        <h2>We've got for you a simple way of booking appartments and cars in the beautiful town of Kigali</h2>
+        <div class="bookings" id="bookings"></div>
+        
+        <br>
+        <br>
+
+        
+        <div class="gallery">
+            <img src="images/3d Modern Home Isolated On White Background _ Premium AI-generated image.jpeg" alt="Image 1">
+            <img src="images/campbell-3ZUsNJhi_Ik-unsplash.jpg" alt="Image 2">
+            <img src="images/Download premium png of PNG Architecture building vehicle city about png, cartoon, plant, sky, and house 12469379.jpeg" alt="Image 3">
+            <img src="images/joey-banks-YApiWyp0lqo-unsplash.jpg" alt="Image 4">
+        </div>
+    </div>
+
+    <script>
+        function addBooking() {
+            var name = document.getElementById('name').value;
+            var date = document.getElementById('date').value;
+            if (name && date) {
+                var bookingsDiv = document.getElementById('bookings');
+                var bookingEntry = document.createElement('p');
+                bookingEntry.textContent = name + ' - ' + date;
+                bookingsDiv.appendChild(bookingEntry);
+                document.getElementById('name').value = '';
+                document.getElementById('date').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
